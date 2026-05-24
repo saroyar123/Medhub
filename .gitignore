@@ -1,0 +1,105 @@
+# ==========================================
+# Master Gitignore for Full-Stack Monorepo
+# (Spring Boot, React, React Native, Python)
+# ==========================================
+
+# ------------------------------------------
+# System & General Files
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+*.log
+*.log.*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ------------------------------------------
+# Backend: Spring Boot & Java (Eclipse)
+# ------------------------------------------
+# Compiled Java files
+**/target/
+**/.gradle/
+**/build/
+**/*.class
+**/*.war
+**/*.ear
+**/*.jar
+
+# Eclipse specific files (Crucial to prevent clutter)
+**/.metadata/
+**/.recommenders/
+**/.settings/
+**/.project
+**/.classpath
+**/bin/
+**/.factorypath
+
+# IntelliJ specific (in case you or a teammate use it later)
+**/.idea/
+**/*.iml
+**/*.iws
+
+# ------------------------------------------
+# Frontend: React.js Web
+# ------------------------------------------
+**/frontend-web/node_modules/
+**/frontend-web/dist/
+**/frontend-web/build/
+**/frontend-web/.pnp/
+**/frontend-web/.pnp.js
+**/frontend-web/coverage/
+
+# ------------------------------------------
+# Mobile: React Native
+# ------------------------------------------
+**/mobile-app/node_modules/
+**/mobile-app/.expo/
+**/mobile-app/.tsx/
+**/mobile-app/npm-debug.log*
+**/mobile-app/yarn-error.log*
+
+# Native Android builds and caches
+**/mobile-app/android/.gradle/
+**/mobile-app/android/app/build/
+**/mobile-app/android/build/
+**/*.apk
+**/*.aab
+
+# Native iOS builds and caches
+**/mobile-app/ios/Pods/
+**/mobile-app/ios/build/
+**/mobile-app/ios/DerivedData/
+**/*.moved-aside
+
+# ------------------------------------------
+# AI Service: Python & LLM
+# ------------------------------------------
+# Virtual Environments
+**/.venv/
+**/venv/
+**/env/
+**/ENV/
+**/env.bak/
+**/venv.bak/
+
+# Python caches and compiled files
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ipynb_checkpoints/
+
+# LLM / Vector DB local storage (if you download model weights or use local DBs)
+**/*.bin
+**/*.pt
+**/*.pth
+**/chroma_db/
+**/faiss_index/
