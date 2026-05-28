@@ -1,7 +1,9 @@
 package in.medhub.backend.model;
 
-import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,13 +16,21 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "doctorsAvailability")
 public class DoctorAvailability {
+	
+	public DoctorAvailability() {
+		
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private DayOfWeek dayOfWeek;
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	private LocalDate date;
+	
+	@JsonFormat(pattern = "HH:mm:ss")
 	private LocalTime startTime;
+	@JsonFormat(pattern = "HH:mm:ss")
 	private LocalTime endTime;
 	
 	@ManyToOne
@@ -33,11 +43,11 @@ public class DoctorAvailability {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public DayOfWeek getDayOfWeek() {
-		return dayOfWeek;
+	public LocalDate getDate() {
+		return date;
 	}
-	public void setDayOfWeek(DayOfWeek dayOfWeek) {
-		this.dayOfWeek = dayOfWeek;
+	public void setDate(LocalDate date) {
+		this.date = date;
 	}
 	public LocalTime getStartTime() {
 		return startTime;
