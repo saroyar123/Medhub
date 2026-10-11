@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sym_001",
+    "symptom_cluster": "Sharp central chest pressure, radiating pain to left arm or jaw, acute shortness of breath, sudden cold sweats, palpitations, crushing chest tightness, lightheadedness",
+    "required_specialty": "Cardiologist",
+    "urgency": "High (Emergency)",
+    "age_group": "Adult / Geriatric",
+    "icd_codes": ["I20.9", "I21.9", "R07.9"],
+    "clinical_rationale": "Classic presentation of acute coronary syndrome (ACS), myocardial ischemia, or malignant cardiac arrhythmias requiring immediate emergency evaluation and ECG/troponin workup."
+  },
+  {
+    "id": "sym_002",
+    "symptom_cluster": "Persistent itchy skin rash, chronic eczema, inflammatory cystic acne, changing pigmented moles with irregular borders, chronic hives, sudden localized swelling, severe scaling",
+    "required_specialty": "Dermatologist",
+    "urgency": "Moderate",
+    "age_group": "All Ages",
+    "icd_codes": ["L20.9", "L70.0", "D22.9", "L50.9"],
+    "clinical_rationale": "Cutaneous lesions, chronic inflammatory skin disorders, and dysplastic nevi require direct visual and dermoscopic inspection by a skin specialist to rule out malignancy or chronic dermatitis."
+  },
+  {
+    "id": "sym_003",
+    "symptom_cluster": "High infant fever, persistent ear pulling, chronic earaches, delayed speech or motor milestones, childhood wheezing, pediatric asthma attacks, routine vaccination tracking",
+    "required_specialty": "Pediatrician",
+    "urgency": "Moderate",
+    "age_group": "Neonates to Adolescents (0-18)",
+    "icd_codes": ["P84", "J45.901", "H66.90", "R50.9"],
+    "clinical_rationale": "Infants, children, and adolescents exhibit unique physiological baselines and developmental trajectories that demand specialized pediatric expertise for proper management."
+  },
+  {
+    "id": "sym_004",
+    "symptom_cluster": "Severe symmetrical joint pain, morning stiffness lasting over an hour, chronic lower back stiffness, swollen finger joints, restricted spinal mobility, systemic fatigue, inflammatory arthritis",
+    "required_specialty": "Rheumatologist",
+    "urgency": "Moderate",
+    "age_group": "Adult",
+    "icd_codes": ["M06.9", "M45.9", "M19.90"],
+    "clinical_rationale": "Persistent joint inflammation paired with prolonged morning stiffness strongly correlates with autoimmune pathologies like rheumatoid arthritis, ankylosing spondylitis, or systemic connective tissue disorders."
+  },
+  {
+    "id": "sym_005",
+    "symptom_cluster": "Chronic burning heartburn, frequent acid reflux, severe postprandial abdominal pain, unexplained rapid weight loss, chronic constipation or diarrhea, hematochezia, dark tarry stools",
+    "required_specialty": "Gastroenterologist",
+    "urgency": "Moderate to High",
+    "age_group": "All Ages",
+    "icd_codes": ["K21.9", "K92.2", "K50.90", "R10.9"],
+    "clinical_rationale": "Upper and lower GI symptoms coupled with alarm features like weight loss or gastrointestinal bleeding mandate specialized endoscopic and colonoscopic evaluation."
+  },
+  {
+    "id": "sym_006",
+    "symptom_cluster": "Recurrent throbbing headaches, chronic migraines with visual aura, unexplained vertigo, sudden numbness or tingling in limbs, focal weakness, acute seizure episodes, progressive short-term memory lapses",
+    "required_specialty": "Neurologist",
+    "urgency": "High",
+    "age_group": "All Ages",
+    "icd_codes": ["G43.909", "G40.909", "R51.9", "R41.3"],
+    "clinical_rationale": "Focal neurological deficits, recurrent migraine patterns, or unexplained paresthesias require diagnostic neuroimaging and central/peripheral nervous system assessments."
+  },
+  {
+    "id": "sym_007",
+    "symptom_cluster": "Persistent overwhelming anxiety, chronic sadness, debilitating panic attacks, extreme mood swings, severe insomnia, intrusive thoughts, profound loss of interest in daily activities",
+    "required_specialty": "Psychiatrist",
+    "urgency": "Moderate",
+    "age_group": "Adolescent / Adult",
+    "icd_codes": ["F41.1", "F32.9", "F41.0", "G47.00"],
+    "clinical_rationale": "Behavioral health crises, clinical mood disorders, and anxiety states benefit from psychiatric evaluation alongside specialized pharmacological or structured psychotherapeutic intervention."
+  },
+  {
+    "id": "sym_008",
+    "symptom_cluster": "Chronic nasal congestion, persistent sinus pressure, recurring sore throats, muffled hearing, chronic ear infections, persistent hoarseness, swallowing difficulties, tonsillar swelling",
+    "required_specialty": "Otolaryngologist (ENT)",
+    "urgency": "Low to Moderate",
+    "age_group": "All Ages",
+    "icd_codes": ["J32.9", "H65.90", "R49.0", "J02.9"],
+    "clinical_rationale": "Localized structural pathologies affecting the ears, nose, and upper throat tract require specialized optical instruments and localized intervention."
+  },
+  {
+    "id": "sym_009",
+    "symptom_cluster": "Frequent excessive thirst, unexplained frequent urination, blurry vision, slow-healing skin cuts, chronic fatigue, unexpected weight fluctuations, blood sugar spikes",
+    "required_specialty": "Endocrinologist",
+    "urgency": "Moderate",
+    "age_group": "All Ages",
+    "icd_codes": ["E11.9", "E03.9", "E05.9"],
+    "clinical_rationale": "Symptom clusters of polyuria and polydipsia suggest metabolic dysregulation, diabetes mellitus, or thyroid axis imbalances requiring hormonal panels."
+  },
+  {
+    "id": "sym_010",
+    "symptom_cluster": "Painful urination, blood in urine, recurring urinary tract infections, lower flank pain, foamy urine, decreased urine output, chronic kidney stone discomfort",
+    "required_specialty": "Nephrologist / Urologist",
+    "urgency": "Moderate to High",
+    "age_group": "Adult",
+    "icd_codes": ["N39.0", "N20.0", "N18.9"],
+    "clinical_rationale": "Renal and urinary tract irregularities require targeted urinalysis, structural imaging, and glomerular filtration rate tracking."
+  }
+]
