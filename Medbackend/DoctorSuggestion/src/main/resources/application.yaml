@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: DoctorSuggestion
+  ai:
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+        index-type: NONE
+        distance-type: COSINE_DISTANCE
+        dimensions: 2048
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: https://openrouter.ai/api/v1
+      chat:
+        options:
+          model: nvidia/nemotron-3.5-lightning:free
+          temperature: 0.3
+      embedding:
+        options:
+          model: nvidia/nemotron-3-embed-1b:free
+  datasource:
+    url: jdbc:postgresql://localhost:5433/medhub_rag
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    org.springframework.ai.openai: DEBUG
+    org.springframework.ai.chat.client.advisor: DEBUG

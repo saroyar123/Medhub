@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: UserService
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Medhub_User
+    username: postgres
+    password: Saroyar
+
+  jpa:
+    hibernate:
+      ddl-auto: create

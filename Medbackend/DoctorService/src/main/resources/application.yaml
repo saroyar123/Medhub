@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: DoctorService
+  datasource:
+      url: jdbc:postgresql://localhost:5432/Medhub_Doctor
+      username: postgres
+      password: Saroyar
+
+  jpa:
+    hibernate:
+      ddl-auto: update
