@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/doctor")
+@RequestMapping("/v1/doctors")
 public class DoctorController {
 
     @Autowired
@@ -21,7 +21,8 @@ public class DoctorController {
     }
 
     @GetMapping()
-    public List<DoctorEntity> getDoctorBySpeciality(@RequestParam String speciality){
-        return doctorService.getDoctorBySpeciality(speciality);
+    public List<DoctorEntity> getDoctorBySpeciality(@RequestParam String specialty){
+        System.out.println("Api call start");
+        return doctorService.getDoctorBySpeciality(specialty);
     }
 }

@@ -1,5 +1,6 @@
 package com.medhub.DoctorSuggestion.Controller;
 
+import com.medhub.DoctorSuggestion.Dto.LLMRespponse;
 import com.medhub.DoctorSuggestion.service.MedHubChatService;
 import com.medhub.DoctorSuggestion.service.MedHubKnowledgeLoader;
 import org.springframework.http.ResponseEntity;
@@ -34,16 +35,18 @@ public class RagController {
     }
 
     @PostMapping("/chat")
-    public ResponseEntity<Map<String, String>> chatWithMedHub(@RequestBody Map<String, String> requestPayload) {
+    public ResponseEntity<LLMRespponse> chatWithMedHub(@RequestBody Map<String, String> requestPayload) {
+        // Extract userId (or sessionId) and user message from the JSON payload
+        String userId = requestPayload.getOrDefault("userId", "default_user");
         String userMessage = requestPayload.get("message");
 
         if (userMessage == null || userMessage.trim().isEmpty()) {
-            return ResponseEntity.badRequest().body(Map.of("error", "Message cannot be empty"));
+            return ResponseEntity.badRequest().body(null);
         }
 
-        // Call the RAG chat service
-        String aiResponse = medHubChatService.getSpecialistRecommendation(userMessage);
+        // Call the service workflow (RAG lookup -> Sufficiency check/Clarification -> Doctor API gateway)
+        LLMRespponse aiResponse = medHubChatService.getSpecialistRecommendation(userId, userMessage);
 
-        return ResponseEntity.ok(Map.of("response", aiResponse));
+        return ResponseEntity.ok(aiResponse);
     }
 }

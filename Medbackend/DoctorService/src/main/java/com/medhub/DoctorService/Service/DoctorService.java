@@ -27,6 +27,9 @@ public class DoctorService {
     }
 
     public List<DoctorEntity> getDoctorBySpeciality(String speciality){
-        return doctorRepository.findBySpecializationName(speciality);
+        System.out.println("speciality: "+speciality);
+        List<DoctorEntity> res=doctorRepository.findBySpecializationName(speciality);
+        System.out.println("res: "+res.toString());
+        return res;
     }
 }
