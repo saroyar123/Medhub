@@ -1,11 +1,13 @@
-package com.medhub.DoctorSuggestion.service;import org.springframework.ai.document.Document;
+package com.medhub.DoctorSuggestion.service;
+import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.annotation.PostConstruct;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.ObjectMapper;
+
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +27,11 @@ public class MedHubKnowledgeLoader {
             ObjectMapper mapper = new ObjectMapper();
             InputStream inputStream = new ClassPathResource("SymptomsDoc.json").getInputStream();
 
-            List<Map<String, Object>> symptoms = mapper.readValue(inputStream, new TypeReference<>() {});
-
+            List<Map<String, Object>> symptoms =
+                    mapper.readValue(
+                            inputStream,
+                            new TypeReference<List<Map<String, Object>>>() {}
+                    );
             List<Document> documents = symptoms.stream().map(item -> {
                 // Construct a rich string for embedding generation
                 String content = String.format(

@@ -43,6 +43,8 @@ public class MedHubChatService {
                 .map(Document::getText)
                 .collect(Collectors.joining("\n\n"));
 
+        System.out.println("Embedded context: " + clinicalContext);
+
         String systemPrompt = String.format("""
             You are MedHub, an expert clinical routing assistant. 
             Analyze the user's latest message and full conversation history against the clinical guidelines context below.
